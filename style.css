@@ -204,3 +204,17 @@ select, input[type="number"] {
         flex-direction: column;
     }
 }
+
+#Precio > input {
+    height: 40px;
+    width: 100px;
+    background-color: black;
+    color: white;
+}
+
+#Precio2 > input {
+    height: 40px;
+    width: 100px;
+    background-color: black;
+    color: white;
+}
