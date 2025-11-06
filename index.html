@@ -70,7 +70,7 @@
 
                 <div class="form-group">
                     <label for="adultos">Número de Adultos (865 MXN por persona):</label>
-                    <select id="adultos" name="adultos">
+                    <select id="adultos" name="adultos" onchange="calcular()">
                         <option value="1">1 Adulto</option>
                         <option value="2">2 Adultos</option>
                         <option value="3">3 Adultos</option>
@@ -81,7 +81,7 @@
 
                 <div class="form-group">
                     <label for="menores">Número de Menores (437 MXN por niño):</label>
-                    <select id="menores" name="menores">
+                    <select id="menores" name="menores" onchange="calcular()">
                         <option value="0">0 Menores</option>
                         <option value="1">1 Menor</option>
                         <option value="2">2 Menores</option>
