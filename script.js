@@ -2,9 +2,9 @@ var formulario = document.getElementById("PrecioCalculo");
 var formulario2 = document.getElementById("PrecioCalculo2");
 var vuelo = formulario.vuelo;
 var hospedaje = formulario.hospedaje;
-var cantidad = formulario.diasindividual.value;
 
 function calcular() {
+    var cantidad = parseInt(formulario.diasindividual.value);
     var total = 0;
     // VUELOS
     if(vuelo.value == "sin-avion") {
@@ -77,7 +77,7 @@ function calcular() {
         alert("Seleccione el numero de menores");
         return;
     }
-    total = total * cantidad;
     //DIAS
+    total = total * cantidad;
     formulario.total.value = total;
 }

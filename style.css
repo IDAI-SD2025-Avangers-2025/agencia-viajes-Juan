@@ -208,6 +208,7 @@ select, input[type="number"] {
 #Precio > input {
     height: 40px;
     width: 100px;
+    margin: auto;
     background-color: black;
     color: white;
 }
