@@ -204,3 +204,17 @@ select, input[type="number"] {
         flex-direction: column;
     }
 }
+
+input[readonly] {
+    width: 30%;
+    padding: 8px;
+    margin: auto;
+    display: block;
+    margin-top: 10px;
+    border: 1px solid;
+    border-radius: 3px;
+    background-color: rgb(230, 230, 230);
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

@@ -50,11 +50,12 @@ function calcular() {
     else {
         total += dias * 769;
     }
-    formulario.total.value = total;
+    formulario.total.value = "$" + total;
 }
 
 var formulario2 = document.getElementById("PrecioCalculo2");
 var destino = formulario2.destino;
+var especial = formulario2.especial;
 
 function calcular2() {
     var total = 0;
@@ -80,12 +81,38 @@ function calcular2() {
 
     //DIAS
     var dias = parseInt(formulario2.diaspaquete.value) || 0;
-    if (formulario.diasindividual.value == 0) {
+    if (formulario2.diaspaquete.value == 0) {
         alert("Seleccione cuantos dias quiere en su paquete");
-        total = "N/A";
     }
     else {
         total += dias * 899;
     }
-    formulario2.total.value = total;
+
+    //PAQUETE ESPECIAL
+    if (formulario2.especial.checked) {
+        total += 19999;
+    }
+    else {
+        total += 0;
+    }
+
+    //OPCIONES EXTRA
+    if (formulario2.bebidas.checked) {
+        total += 699;
+    }
+    if (formulario2.buceo.checked) {
+        total += 699;
+    }
+    if (formulario2.expedicion.checked) {
+        total += 699;
+    }
+    if (formulario2.fotografias.checked) {
+        total += 699;
+    }
+    if (formulario2.pesca.checked) {
+        total += 699;
+    }
+
+    formulario2.total.value = "$" + total;
 }
+

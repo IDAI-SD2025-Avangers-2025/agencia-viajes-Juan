@@ -125,18 +125,18 @@
             <div class="form-group">
                 <label>Paquete Especial (19,999 MXN):</label>
                 <div class="radio-group">
-                    <label><input type="radio" name="especial" value="crucero"> Crucero Romántico (7 días)</label>
+                    <label><input type="checkbox" id="especial" name="especial"> Crucero Romántico (7 días)</label>
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Opciones Extra (699 MXN por opcion) :</label>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="extras" value="bebidas"> Bebidas Alcohólicas</label>
-                    <label><input type="checkbox" name="extras" value="buceo"> Clases de Buceo</label>
-                    <label><input type="checkbox" name="extras" value="expedicion"> Tour de Expedición</label>
-                    <label><input type="checkbox" name="extras" value="fotografias"> Paquete de Fotografías</label>
-                    <label><input type="checkbox" name="extras" value="pesca"> Pesca en Altamar</label>
+                    <label><input type="checkbox" name="extras" value="bebidas" id="bebidas"> Bebidas Alcohólicas</label>
+                    <label><input type="checkbox" name="extras" value="buceo" id="buceo"> Clases de Buceo</label>
+                    <label><input type="checkbox" name="extras" value="expedicion" id="expedicion"> Tour de Expedición</label>
+                    <label><input type="checkbox" name="extras" value="fotografias" id="fotografias"> Paquete de Fotografías</label>
+                    <label><input type="checkbox" name="extras" value="pesca" id="pesca"> Pesca en Altamar</label>
                 </div>
             </div>
             <button type="button" class="submit-btn" onclick="calcular2()">Cotización Paquetes</button>
@@ -152,8 +152,6 @@
         <p>Matrícula: 12345678</p>
         <p>WEB PAGE</p>
     </footer>
-
-
     <script src="script.js"></script>
 </body>
 </html>
