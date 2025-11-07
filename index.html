@@ -92,14 +92,14 @@
 
                 <div class="form-group">
                     <label for="dias-individual">Número de Días (769 MXN por día):</label>
-                    <input type="number" id="diasindividual" name="diasindividual" min="1" max="365">
-                    <span id="Precio">
-                        <input type="text"id="total" name="total" readonly>
-                    </span>
+                    <input type="number" id="diasindividual" name="diasindividual" min="1" max="365" value="0">
                 </div>
-
                 <button type="button" class="submit-btn" onclick="calcular()">Cotización Individual</button>
+                <span id="Precio">
+                    <input type="text" id="total" name="total" readonly>
+                </span>
             </section>
+        </div>
         </form>
         <!-- SECCIÓN 2: PAQUETES -->
     <form action="" id="PrecioCalculo2">

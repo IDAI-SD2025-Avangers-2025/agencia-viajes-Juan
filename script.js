@@ -4,7 +4,6 @@ var vuelo = formulario.vuelo;
 var hospedaje = formulario.hospedaje;
 
 function calcular() {
-    var cantidad = parseInt(formulario.diasindividual.value);
     var total = 0;
     // VUELOS
     if(vuelo.value == "sin-avion") {
@@ -78,6 +77,8 @@ function calcular() {
         return;
     }
     //DIAS
-    total = total * cantidad;
+    var dias = parseInt(formulario.diasindividual.value) || 0;
+    total += dias * 769;
+
     formulario.total.value = total;
 }
