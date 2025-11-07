@@ -1,5 +1,4 @@
 var formulario = document.getElementById("PrecioCalculo");
-var formulario2 = document.getElementById("PrecioCalculo2");
 var vuelo = formulario.vuelo;
 var hospedaje = formulario.hospedaje;
 
@@ -36,49 +35,57 @@ function calcular() {
     }
 
     //NUMEROADULTOS
-    if (formulario.adultos.value == "1") {
-        total += 865;
-    }
-    else if(formulario.adultos.value == "2") {
-        total += 865 * 2;
-    }
-    else if(formulario.adultos.value == "3") {
-        total += 865 * 3;
-    }
-    else if(formulario.adultos.value == "4") {
-        total += 865 * 4;
-    }
-    else if(formulario.adultos.value == "5") {
-        total += 865 * 5;
-    }
-    else {
-        alert("Seleccione el numero de adultos");
-        return;
-    }
+    var adultos = parseInt(formulario.adultos.value);
+    total += adultos * 865;
 
     //NUMEROMENORES
-    if (formulario.menores.value == "0") {
-        total += 0;
-    }
-    else if(formulario.menores.value == "1") {
-        total += 437;
-    }
-    else if(formulario.menores.value == "2") {
-        total += 437 * 2;
-    }
-    else if(formulario.menores.value == "3") {
-        total += 437 * 3;
-    }
-    else if(formulario.menores.value == "4") {
-        total += 437 * 4;
-    }
-    else {
-        alert("Seleccione el numero de menores");
-        return;
-    }
+    var menores = parseInt(formulario.menores.value);
+    total += menores *437;
     //DIAS
     var dias = parseInt(formulario.diasindividual.value) || 0;
-    total += dias * 769;
-
+    if (formulario.diasindividual.value == 0) {
+        alert("Seleccione cuantos dias quiere de vacaciones");
+        total = "N/A";
+    }
+    else {
+        total += dias * 769;
+    }
     formulario.total.value = total;
+}
+
+var formulario2 = document.getElementById("PrecioCalculo2");
+var destino = formulario2.destino;
+
+function calcular2() {
+    var total = 0;
+    //DESTINO
+    if (destino.value == "suramerica") {
+        total += 7999;
+    }
+    else if (destino.value == "europa") {
+        total += 21999;
+    }
+    else if (destino.value == "africa") {
+        total += 17999;
+    }
+    else if (destino.value == "asia") {
+        total += 25999;
+    }
+    else if (destino.value == "norteamerica") {
+        total += 12999;
+    }
+    else {
+        alert("Seleccione un destino");
+    }
+
+    //DIAS
+    var dias = parseInt(formulario2.diaspaquete.value) || 0;
+    if (formulario.diasindividual.value == 0) {
+        alert("Seleccione cuantos dias quiere en su paquete");
+        total = "N/A";
+    }
+    else {
+        total += dias * 899;
+    }
+    formulario2.total.value = total;
 }
